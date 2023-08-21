@@ -1,0 +1,18 @@
+/*Cyclically rotate an array by one  CPP  T.C = O(N-2)  S.C = O(1);
+
+geeks for geegs question 
+
+*/
+
+//User function Template for C++
+
+void rotate(int arr[], int n)
+{
+    int l = arr[n-1];
+    
+    for(int i = n-2; i>=0; i--){
+        arr[i+1] =arr[i];
+    }
+    
+    arr[0] =l;
+}
