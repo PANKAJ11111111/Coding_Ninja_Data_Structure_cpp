@@ -1,0 +1,24 @@
+// Check if two arrays are equal or not  T.C = O(N)  S.C = O(N)
+ 
+
+//Function to check if two arrays are equal or not.
+    bool check(vector<ll> A, vector<ll> B, int N) {
+        //code here
+        int arr1[N];
+        int arr2[N];
+        for(int i=0; i<N; i++){
+            arr1[i] =A[i];
+            arr2[i] =B[i];
+        }
+        
+        sort(arr1,arr1+N);
+        sort(arr2,arr2+N);
+        
+        for(int i=0; i<N; i++){
+            if(arr1[i] != arr2[i]){
+                return false;
+            }
+        }
+        
+        return true;
+    }
